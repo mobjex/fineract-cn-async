@@ -1,3 +1,5 @@
+[![Release](https://jitpack.io/v/mobjex/fineract-cn-async.svg)](https://jitpack.io/#mobjex/fineract-cn-async)
+
 # Apache Fineract CN Async
 
 This contains the code necessary for asynchronous execution of commands with the correct user permissions.

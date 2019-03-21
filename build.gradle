@@ -29,12 +29,12 @@ plugins {
     id("org.nosphere.apache.rat") version "0.3.1"
 }
 
-group 'org.apache.fineract.cn'
-version '0.1.0-BUILD-SNAPSHOT'
+group 'com.github.mobjex'
+version 'develop-SNAPSHOT'
 
 ext.versions = [
-        frameworklang        : '0.1.0-BUILD-SNAPSHOT',
-        frameworkapi         : '0.1.0-BUILD-SNAPSHOT',
+        frameworklang        : 'develop-SNAPSHOT',
+        frameworkapi         : 'develop-SNAPSHOT',
         springcontext        : '4.3.3.RELEASE',
         springsecurity       : '4.2.2.RELEASE',
         springboot           : '1.4.1.RELEASE',
@@ -56,12 +56,13 @@ tasks.withType(JavaCompile) {
 repositories {
     jcenter()
     mavenLocal()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
     compile(
-            [group: 'org.apache.fineract.cn', name: 'lang', version: versions.frameworklang],
-            [group: 'org.apache.fineract.cn', name: 'api', version: versions.frameworkapi],
+            [group: 'com.github.mobjex', name: 'fineract-cn-lang', version: versions.frameworklang],
+            [group: 'com.github.mobjex', name: 'fineract-cn-api', version: versions.frameworkapi],
             [group: 'org.springframework', name: 'spring-context', version: versions.springcontext],
             [group: 'org.springframework.security', name: 'spring-security-web', version: versions.springsecurity],
             [group: 'com.google.code.findbugs', name: 'jsr305', version: versions.findbugs]
